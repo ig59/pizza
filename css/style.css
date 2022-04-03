@@ -1,0 +1,345 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'SFProText';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.header_menu {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 64px;
+}
+
+.pizza_icon {
+    float: left;
+}
+
+.pizza_icon a {
+    text-decoration: none;
+}
+
+.pizza_icon img:first-child {
+    width: 32px;
+    height: 32px;
+    padding: 16px 0px 16px 2px;    
+}
+
+.pizza_icon img:last-child {
+    width: 97px;
+    height: 16px;
+    padding: 24px 0px 24px 12px;
+}
+
+.menu_basket{
+    padding: 12px 0px 12px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#navbar {
+    margin: 0;
+    padding: 0;
+    max-width: 782px;
+    width: 100%;
+    list-style-type: none;
+    position: relative;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.line_one {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}    
+
+.line_two {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+ 
+#navbar li { 
+    flex: 1;    
+}
+
+#navbar li a {
+    width: 100%;
+    text-decoration: none;
+    color: #191919;
+}
+
+#navbar li a:hover {
+    background-color: lightgray;
+}
+
+#navbar li:last-child { 
+    position: relative;
+}
+
+#another::after { 
+    content: url('../icons/Arrow_down.svg');
+    position: relative;
+    top:  4px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.wind {
+    visibility: hidden;
+    position: absolute;  
+    left: -92px;
+    top: 40px;
+    z-index: 1;    
+    margin-top: 8px;
+    width: 285px;
+    height: 334px;
+    transition: 1s;
+}
+
+#navbar li:hover > .wind {
+    visibility: visible;
+}
+
+#triangle {
+    margin: 0 auto;
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #FFFFFF;
+}
+
+#submenu {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    margin: 0;
+    padding: 26px 20px 20px 20px; 
+    list-style: none;    
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px rgba(25, 25, 25, 0.1);
+    border-radius: 7px;    
+}
+
+#submenu li {
+    width: 100%;
+}
+
+#submenu li a {
+    text-decoration: none;
+    color: #191919;
+}
+
+.basket {
+    background: #FF7010;
+    border-radius: 4px;
+    color: white;
+    padding-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.basket::before {
+    content: url('../icons/Shopping_bag.svg');
+    width: 24px;
+    height: 24px;
+    padding: 10px 8px 9px 16px;
+}
+
+.basket:hover {
+    background: #ff1010;
+}
+
+.wrapper {
+    margin: 0px auto;
+    max-width: 1920px;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0px;
+    margin-top: 96px;
+}
+
+.title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0px;
+}
+
+.filter {
+    width: 126px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.filter:hover { 
+    background: lightgray;
+}
+
+
+.filter::before {
+    content: url('../icons/filter.svg');
+    position: relative;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.content_conteiner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 28px;
+}
+
+.box {    
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag {
+    background-color: red;
+    width: 65px;
+    height: 32px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.pizza_pic {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.desc_pizza {
+    margin: 16px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    color: #191919;
+}
+
+.pizza_name {
+    margin: 12px 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.btn_price_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 131px;
+    height: 48px;
+    background: #FF7010;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background: #ff1010;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: #FF7010;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (max-width: 1150px) { 
+    .content_conteiner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #navbar {
+        max-width: 482px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 850px) { 
+    .content_conteiner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .line_one {
+        flex-direction: column;
+    }    
+    
+    .line_two {
+        flex-direction: column;
+    }
+
+    .header_menu {
+        height: 128px;
+    }
+
+    .header_content {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 550px) { 
+    .content_conteiner {
+        grid-template-columns: repeat(1, 1fr);
+    }   
+    .header_menu {
+        position: relative;
+    }
+    .header_content {
+         margin-top: 66px;
+    }
+}
